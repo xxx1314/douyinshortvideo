@@ -47,3 +47,27 @@ MRCustomizedPageControllerViewController *videoListVC = [[MRCustomizedPageContro
     [self.player openPlayerWithURL:videoUrl];
 
 }
+
+
+使用WMPageController实现多页控制器切换
+主要代码
+NSArray *viewControllers = @[[ViewController1 class],[ViewController2 class]]; //需要注意，传入的是类名
+    NSArray *titles = @[@"首页",@"推荐"];
+    WMPageController *pageVC = [[WMPageController alloc] initWithViewControllerClasses:viewControllers andTheirTitles:titles];
+    pageVC.dataSource = self;
+    pageVC.titleColorSelected = [UIColor redColor];
+    pageVC.menuItemWidth = SCREEN_WIDTH/titles.count;
+    [self.navigationController pushViewController:pageVC animated:YES];
+    
+    //内容容器大小
+- (CGRect)pageController:(WMPageController *)pageController preferredFrameForContentView:(WMScrollView *)contentView{
+    return CGRectMake(0,0 , SCREEN_WIDTH, SCREEN_HEIGHT);
+}
+
+//上面导航的大小
+- (CGRect)pageController:(WMPageController *)pageController preferredFrameForMenuView:(WMMenuView *)menuView{
+    return CGRectMake(0,StatusBarHeight+44 , SCREEN_WIDTH, 40);
+}
+
+
+
