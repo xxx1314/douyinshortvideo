@@ -1,0 +1,28 @@
+PODS:
+  - PLPlayerKit (3.4.0):
+    - PLPlayerKit/iphoneos (= 3.4.0)
+  - PLPlayerKit/iphoneos (3.4.0)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
+  - WMPageController (2.5.2)
+
+DEPENDENCIES:
+  - PLPlayerKit
+  - SDWebImage
+  - WMPageController
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - PLPlayerKit
+    - SDWebImage
+    - WMPageController
+
+SPEC CHECKSUMS:
+  PLPlayerKit: e6ad0e14a1c49db4befab201c2701d26489314e8
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
+
+PODFILE CHECKSUM: 41f881de25e37b723c69e88df7e4aebd9513d76a
+
+COCOAPODS: 1.5.0
